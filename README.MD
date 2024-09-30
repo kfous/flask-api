@@ -29,3 +29,7 @@ To set up the application, you can choose one of the following methods:
 3. (Optional) Run the test file to test a POST request:
     ```bash
     python test_app.py
+
+
+Download [Studio 3t: "https://studio3t.com" and connect to MongoDB:
+Make a local Mongodb connection: mongodb://localhost:27017/sentiment_db

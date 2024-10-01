@@ -1,7 +1,24 @@
 version: '3.8'
-
 services:
-  api:
+  flask-app:
     build: .
+    container_name: flask-app
     ports:
       - "5000:5000"
+    depends_on:
+      - mongo
+    environment:
+      MONGO_URI: mongodb://mongo:27017/sentiment_db
+    volumes:
+      - .:/app
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

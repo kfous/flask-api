@@ -26,10 +26,11 @@ To set up the application, you can choose one of the following methods:
 2. Start the application
     ```bash
     docker-compose up
-3. (Optional) Run the test file to test a POST request:
+3. (Optional) Run the test file to test the POST requests:
     ```bash
     python test_app.py
 
-
-Download [Studio 3t: "https://studio3t.com" and connect to MongoDB:
-Make a local Mongodb connection: mongodb://localhost:27017/sentiment_db
+## Check results
+Download [Studio 3t: https://studio3t.com and connect to MongoDB:
+- Make a local Mongodb connection using the mongo URI: mongodb://localhost:27017/sentiment_db
+- If POST requests were successful, sentiment is stored in sentiment_db/sentiment_results.

@@ -10,3 +10,4 @@ torch==2.4.1
 Werkzeug==2.0.3
 pymongo==4.9.1
 python-dotenv
+boto3==1.35.41

@@ -40,3 +40,20 @@ Download Studio 3T: [here](https://studio3t.com) and connect to MongoDB:
 ## Amazon Prerequisites:
 1. Configure Amazon CLI credentials: [here](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 2. Create an Amazon S3 bucket with a GetObject policy in order to access your files publicly: [here](https://awspolicygen.s3.amazonaws.com/policygen.html)
+
+### Create and configure an Amazon EC2 Instance:
+Connect to the instance and run the below installations:\
+$ sudo yum update -y\
+$ sudo yum install -y git\
+$ sudo yum install -y docker\
+$ sudo service docker start\
+$ sudo systemctl enable docker\
+$ sudo usermod -a -G docker ec2-user\
+$ exit\
+$ sudo yum install python3-pip\
+$ sudo pip3 install docker-compose\
+
+$ git clone https://github.com/kfous/flask-api.git
+Cd to project and create your .env file
+$ docker-compose up --build -d
+$ docker ps

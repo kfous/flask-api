@@ -2,7 +2,7 @@ import requests
 
 
 def test_sentiment():
-    url = 'http://127.0.0.1:5000/predict'
+    url = 'http://127.0.0.1:5000/sentiment'
     data = {'text': 'This is an amazing product!'}
 
     response = requests.post(url, json=data)
@@ -15,7 +15,7 @@ def test_sentiment():
 
 
 def test_save():
-    url = 'http://127.0.0.1:5000/analyze'
+    url = 'http://127.0.0.1:5000/save'
     data = {'text': 'This is an crappy product.'}
 
     response = requests.post(url, json=data)

@@ -4,11 +4,9 @@ WORKDIR /app
 
 COPY . /app/
 
-RUN pip install --upgrade pip
-RUN pip install virtualenv
-RUN virtualenv venv
+RUN pip install --no-cache-dir -r requirements.txt
 
-RUN . venv/bin/activate && pip install --no-cache-dir -r requirements.txt
+RUN pip install torch==2.4.1
 
 EXPOSE 5000
 

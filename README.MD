@@ -37,23 +37,52 @@ Download Studio 3T: [here](https://studio3t.com) and connect to MongoDB:
 - Make a local Mongodb connection using the mongo URI: mongodb://localhost:27017/sentiment_db
 - If POST requests were successful, sentiment is stored in sentiment_db/sentiment_results.
 
-## Amazon Prerequisites:
-1. Configure Amazon CLI credentials: [here](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
-2. Create an Amazon S3 bucket with a GetObject policy in order to access your files publicly: [here](https://awspolicygen.s3.amazonaws.com/policygen.html)
+## Amazon Prerequisites
 
-### Create and configure an Amazon EC2 Instance:
-Connect to the instance and run the below installations:\
-$ sudo yum update -y\
-$ sudo yum install -y git\
-$ sudo yum install -y docker\
-$ sudo service docker start\
-$ sudo systemctl enable docker\
-$ sudo usermod -a -G docker ec2-user\
-$ exit\
-$ sudo yum install python3-pip\
-$ sudo pip3 install docker-compose\
+### Configure Amazon CLI Credentials
 
-$ git clone https://github.com/kfous/flask-api.git
-Cd to project and create your .env file
-$ docker-compose up --build -d
-$ docker ps
+1. **Install and configure Amazon CLI credentials:** Follow the instructions [here](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
+
+2. **Create an Amazon S3 bucket** with a `GetObject` policy to access your files publicly. You can generate the policy [here](https://awspolicygen.s3.amazonaws.com/policygen.html).
+
+### Create and Configure an Amazon EC2 Instance
+
+1. **Connect to the instance** and run the following installations:
+
+   ```bash
+   sudo yum update -y
+   sudo yum install -y git
+   sudo yum install -y docker
+   sudo service docker start
+   sudo systemctl enable docker
+   sudo usermod -a -G docker ec2-user
+   exit
+   sudo yum install python3-pip
+   sudo pip3 install docker-compose
+   ```
+
+2. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/kfous/flask-api.git
+   ```
+
+3. **Navigate to the project directory** and create your `.env` file.
+
+4. **Build and start the application:**
+
+   ```bash
+   docker-compose up --build -d
+   ```
+
+5. **Check running containers:**
+
+   ```bash
+   docker ps
+   ```
+
+---
+
+
+
+
